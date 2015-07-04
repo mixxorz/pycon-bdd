@@ -1,4 +1,7 @@
+import json
+
 from django.core.urlresolvers import reverse
+from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.views.generic import ListView
 
@@ -13,5 +16,13 @@ class TodoView(ListView):
     def post(self, request, *args, **kwargs):
         TodoItem.objects.create(text=request.POST['todo_item'])
         return redirect(reverse('todo_view'))
+
+    def delete(self, request):
+        data = json.loads(request.body)
+
+        item = TodoItem.objects.get(pk=data['id'])
+        item.delete()
+
+        return HttpResponse('OK')
 
 todo_view = TodoView.as_view()
