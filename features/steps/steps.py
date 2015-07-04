@@ -14,6 +14,11 @@ def no_todo_items(context):
     context.test.assertEqual(0, TodoItem.objects.count())
 
 
+@given(u'there is one todo item')
+def one_todo_items(context):
+    TodoItem.objects.create(text='First todo item')
+
+
 @when(u'I add "{text}"')
 def buy_pycon_tickets(context, text):
     context.browser.fill('todo_item', text)
