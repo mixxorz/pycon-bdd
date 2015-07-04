@@ -26,12 +26,13 @@
             <form class="row" method="POST">
               <div class="col s10">
                 <div class="input-field">
-                  <input id="first_name" type="text" class="validate">
-                  <label for="first_name">What do you need to do?</label>
+                  {% csrf_token %}
+                  <input id="todo_item" name="todo_item" type="text" class="validate">
+                  <label for="todo_item">What do you need to do?</label>
                 </div>
               </div>
               <div class="col s2">
-                <button class="btn-floating btn-large waves-effect waves-light yellow accent-4" type="submit" name="action"><i class="material-icons">add</i></button>
+                <button id="btnSubmit" class="btn-floating btn-large waves-effect waves-light yellow accent-4" type="submit" name="action"><i class="material-icons">add</i></button>
               </div>
             </form>
 
