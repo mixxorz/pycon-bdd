@@ -23,7 +23,7 @@
 
           <div class="card-content">
 
-            <form class="row" method="POST">
+            <form action="{% url "todo_view" %}" class="row" method="POST">
               <div class="col s10">
                 <div class="input-field">
                   {% csrf_token %}
@@ -37,12 +37,14 @@
             </form>
 
             <ul class="collection">
+              {% for item in todo_items %}
               <li class="collection-item">
                 <div>
-                  1. Hello
-                  <a href="#!" class="secondary-content grey-text text-lighten-2" data-delete="10"><i class="material-icons">delete</i></a>
+                  1. {{ item.text }}
+                  <a href="#!" class="secondary-content grey-text text-lighten-2" data-delete="{{ item.id }}"><i class="material-icons">delete</i></a>
                 </div>
               </li>
+              {% endfor %}
             </ul>
 
           </div>
