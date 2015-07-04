@@ -41,7 +41,7 @@
               <li class="collection-item">
                 <div>
                   {{ forloop.counter }}. {{ item.text }}
-                  <a href="#!" class="secondary-content grey-text text-lighten-2" data-delete="{{ item.id }}"><i class="material-icons">delete</i></a>
+                  <a href="#!" class="secondary-content grey-text text-lighten-2" data-text="{{ item.text }}" data-delete="{{ item.id }}"><i class="material-icons">delete</i></a>
                 </div>
               </li>
               {% endfor %}
