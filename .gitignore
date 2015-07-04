@@ -1,0 +1,19 @@
+*.pyc
+include/
+lib/
+staticfiles/
+media/
+.build
+
+# Sass-cache
+*.sass-cache/
+
+# sqlite3 db
+*.db
+*.sqlite3
+
+# Virtual env
+venv/
+
+# Mac crap
+*.DS_Store
