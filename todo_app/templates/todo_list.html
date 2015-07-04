@@ -40,7 +40,7 @@
               {% for item in todo_items %}
               <li class="collection-item">
                 <div>
-                  1. {{ item.text }}
+                  {{ forloop.counter }}. {{ item.text }}
                   <a href="#!" class="secondary-content grey-text text-lighten-2" data-delete="{{ item.id }}"><i class="material-icons">delete</i></a>
                 </div>
               </li>
