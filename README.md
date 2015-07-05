@@ -11,7 +11,7 @@ $ pip install -r requirements.txt
 ```
 
 I created branches for different levels of completion for the project. You can
-access these via the checkouting out these branches. For example, 
+access these by checking out these branches. For example, 
 `$ git checkout step0` would bring you to the initial state, with nothing
 working but the assets.
 
