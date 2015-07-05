@@ -20,6 +20,6 @@ Run the behave tests by issuing the `python manage.py behave` command.
 Have fun!
 
 # Links
-[behave](https://github.com/behave/behave)
-[behave-django](https://github.com/mixxorz/behave-django)
-[BehaveToolkit](https://github.com/mixxorz/BehaveToolkit)
+- [behave](https://github.com/behave/behave)
+- [behave-django](https://github.com/mixxorz/behave-django)
+- [BehaveToolkit](https://github.com/mixxorz/BehaveToolkit)
